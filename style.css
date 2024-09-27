@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+
+
+* {
+    margin:0;
+    padding:0;   
+}
+
+:root {
+    --screencolor: #e4e3ef;
+    --hoovercolor: #ba4e89;
+    --textcolor: whitesmoke;
+    --textheader: #633251;
+    --textheader1: #FCC7D1;
+}
+
+
+body {
+   background-image: url("https://cdn.pixabay.com/photo/2015/05/31/14/23/organizer-791939_1280.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+
+}
+
+.page-header {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+
+
+}
+
+.header {
+    font-size: 4rem;
+    font-weight: bold;
+    justify-content: center;
+    text-align:center;
+    color: var(--textheader);
+    background-color:var(--textheader1);
+    width: 50%;
+    height: auto;
+    padding: 2rem;
+    margin-inline: 350px;
+    margin-top: 200px;
+    text-shadow: 5px 5px 10px #3A273B;
+    --animate-duration: 5s;
+    --animate-delay: 0.9s;
+}
+
+.soc-icons a {
+    font-size: 1.5rem;
+    color: white;
+    margin: 1rem;
+}
+
+.card-img {
+    height: 200px;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image {
+    width: 80px;
+    height: auto;
+}
+
+.text {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #683142;  
+}
+
+.figure-img {
+    width: 500px;
+    height: 300px;  
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+}
