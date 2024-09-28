@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
-
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 * {
     margin:0;
     padding:0;   
 }
 
 :root {
-    --screencolor: #e4e3ef;
-    --hoovercolor: #ba4e89;
-    --textcolor: whitesmoke;
+    --hoovercolor: #FCC7D1;
     --textheader: #633251;
     --textheader1: #FCC7D1;
+    --textheader2: #6B0B3D;
 }
 
 
@@ -21,16 +21,6 @@ body {
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
-
-}
-
-.page-header {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-
-
-
 }
 
 .header {
@@ -44,10 +34,22 @@ body {
     height: auto;
     padding: 2rem;
     margin-inline: 350px;
-    margin-top: 200px;
+    margin-top: 100px;
     text-shadow: 5px 5px 10px #3A273B;
-    --animate-duration: 5s;
+    animation: zoomIn;
+    animation-duration: 5s;
     --animate-delay: 0.9s;
+}
+
+.sub-header {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    text-align: center;
+    margin-inline: 250px;
+    color: var(--textheader2);
+    text-shadow: 2px 2px 15px #4a474a;
 }
 
 .soc-icons a {
@@ -61,24 +63,8 @@ body {
     justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .image {
-    width: 80px;
+    width: 70px;
     height: auto;
 }
 
@@ -104,5 +90,132 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
+}
 
+.card-title {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: #633251; 
+}
+
+.card-header {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #72855E;
+}
+
+.card-text, .card-header {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.priorNum {
+    padding: 0.5rem;
+    border-radius: 30%;
+    box-shadow: 5px 5px 10px #a39aa3;
+}
+
+.navbar-nav {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.navbar-nav a:hover {
+    background-color: var(--hoovercolor);
+    border-radius: 30%;
+    box-shadow: 5px 5px 10px #a39aa3;
+    transform: scale(1.5);
+    animation: rotateOut;
+    animation-duration: 2s;
+    opacity: 0.5;
+}
+
+/* Mobile phone */
+@media screen and (max-width: 600px)
+ {
+    .navbar-nav a:hover {
+        width: 90px;
+        text-align: center;
+    } 
+
+    .header {
+        font-size: 2.8rem;
+        width: 70%;
+        height: auto;
+        padding: 2rem;
+        margin-inline: 100px;
+    }
+    
+    .sub-header {
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: 1.3rem;
+    }
+    
+   .footer-links {
+        font-size: 1rem;
+    }
+
+    .footer1 {
+        font-size: 1rem;
+    }
+
+    .footer2 {
+        font-size: 0.8rem;
+    }
+
+    .footer3 {
+        font-size: 0.8rem;
+    }
+
+    .footer4 {
+        font-size: 0.8rem;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 1200px) and (min-width: 601px)
+{
+    .navbar-nav a:hover {
+        width: 90px;
+        text-align: center;
+    }
+
+    .header {
+        font-size: 3rem;
+        width: 80%;
+        height: auto;
+        padding: 2rem;
+        margin-inline: 50px;
+    }
+    
+    .sub-header {
+        margin-left: 60px;
+        margin-right: 130px;
+        font-size: 1.5rem;
+    }
+    
+    .footer-links {
+        font-size: 0.8rem;
+    }
+
+    .footer1 {
+        font-size: 1rem;
+    }
+
+    .footer2 {
+        font-size: 0.8rem;
+    }
+
+    .footer3 {
+        font-size: 0.8rem;
+    }
+
+    .footer4 {
+        font-size: 0.8rem;
+    }
 }

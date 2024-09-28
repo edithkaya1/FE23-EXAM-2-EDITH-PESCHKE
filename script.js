@@ -1,12 +1,10 @@
-// let choresArr = [];
-
 let chores = [
   {
     choresName: "Walk with the dog",
     image:
       "https://cdn.pixabay.com/photo/2023/07/15/08/43/labrador-8128379_1280.jpg",
     description:
-      "Go for a long walk with Kaya for at least 1 hour every morning and evening.",
+      "Walking with Kaya, at least twice a day.",
     importance: 0,
     choresFinishes: false,
     // deadline: null,
@@ -76,7 +74,7 @@ let chores = [
     choresName: "Laundry",
     image:
       "https://cdn.pixabay.com/photo/2015/02/01/16/54/clothespins-619845_1280.jpg",
-    description: "Making the laundry for the whole family",
+    description: "Making laundry for my family",
     importance: 0,
     choresFinishes: false,
     deadline: null,
@@ -106,13 +104,12 @@ function displayCards(){
               </div>
               <img src="${item.image}" class="card-img-top card-img" alt="${item.image}">
               <div class="card-body">
-              <h5 class="card-title fs-5 text-danger-emphasis fw-bold">${item.choresName}</h5>
+              <h5 class="card-title fs-5">${item.choresName}</h5>
               <p class="card-text">${item.description}</p>
               </div>
               <div class="card-footer text-body-secondary">
                 <p class="card-text pb-1"><i class="fa-solid fa-circle-exclamation"></i> Priority level: <span class="bg-success fs-5 fw-bold text-light priorNum">${item.importance}</span></p>
-                <button class="btn btn-sm btn-primary priorBtns"><i class="fa-sharp-duotone fa-solid fa-check"></i> Importance</button>
-              <button class="btn btn-sm btn-danger priorSort"><i class="fa-solid fa-sort"></i> Sort</button>
+                <button class="btn btn-outline-secondary priorBtns"><i class="fa-sharp-duotone fa-solid fa-check"></i> Importance</button>
               </div>
             </div>
           </div>
@@ -127,11 +124,11 @@ function increasePriority(){
         btn.addEventListener("click", function(){
             if (chores[index].importance < 5){
                 chores[index].importance ++;
-                console.log(chores[index]);
                 document.querySelectorAll(".priorNum")[index].innerHTML = chores[index].importance;
                 changePrioColor(index);
+                // console.log(chores[index]);
             }   
-    });               
+    });             
 });
 }
 increasePriority();
@@ -146,3 +143,16 @@ function changePrioColor(index){
         document.querySelectorAll(".priorNum")[index].classList.replace("bg-warning", "bg-danger");
     } 
 }
+
+let btnSort = document.getElementsByClassName("btnSort");
+console.log(btnSort);
+btnSort[0].addEventListener("click", sortArray);
+
+function sortArray(){
+  chores.sort((a,b) => b.importance - a.importance);
+  console.log(chores);
+  let result = document.getElementById("result");
+  result.innerHTML = "";
+  displayCards();
+  increasePriority();
+};
