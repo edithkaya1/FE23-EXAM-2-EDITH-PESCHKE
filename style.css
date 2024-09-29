@@ -28,12 +28,13 @@ body {
     font-weight: bold;
     justify-content: center;
     text-align:center;
+    letter-spacing: 0.2rem;
     color: var(--textheader);
     background-color:var(--textheader1);
     width: 50%;
     height: auto;
     padding: 2rem;
-    margin-inline: 350px;
+    margin-inline: 340px;
     margin-top: 100px;
     text-shadow: 5px 5px 10px #3A273B;
     animation: zoomIn;
@@ -47,7 +48,7 @@ body {
     font-style: normal;
     font-size: 2rem;
     text-align: center;
-    margin-inline: 250px;
+    margin-inline: 240px;
     color: var(--textheader2);
     text-shadow: 2px 2px 15px #4a474a;
 }
@@ -103,7 +104,7 @@ body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 300;
     font-style: normal;
-    color: #72855E;
+    color: #b40129;
 }
 
 .card-text, .card-header {
@@ -134,8 +135,20 @@ body {
     opacity: 0.5;
 }
 
+.priorBtns {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.btnSort {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
 /* Mobile phone */
-@media screen and (max-width: 600px)
+@media screen and (max-width: 480px)
  {
     .navbar-nav a:hover {
         width: 90px;
@@ -151,7 +164,7 @@ body {
     }
     
     .sub-header {
-        margin-left: 50px;
+        margin-left: 40px;
         margin-right: 50px;
         font-size: 1.3rem;
     }
@@ -178,7 +191,7 @@ body {
 }
 
 /* Tablet */
-@media screen and (max-width: 1200px) and (min-width: 601px)
+@media screen and (max-width: 1200px) and (min-width: 481px)
 {
     .navbar-nav a:hover {
         width: 90px;
@@ -195,7 +208,7 @@ body {
     
     .sub-header {
         margin-left: 60px;
-        margin-right: 130px;
+        margin-right: 120px;
         font-size: 1.5rem;
     }
     

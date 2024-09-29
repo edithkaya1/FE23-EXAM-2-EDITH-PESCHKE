@@ -7,17 +7,15 @@ let chores = [
       "Walking with Kaya, at least twice a day.",
     importance: 0,
     choresFinishes: false,
-    // deadline: null,
     location: "Vienna",
   },
   {
-    choresName: "Hooper training",
+    choresName: "Hoopers training",
     image:
       "https://cdn.pixabay.com/photo/2019/10/25/18/34/dog-4577659_1280.jpg",
     description: "Weekly hoopers training with Kaya.",
     importance: 0,
     choresFinishes: false,
-    // deadline: null,
     location: "Breitenfurt",
   },
   {
@@ -27,7 +25,6 @@ let chores = [
     description: "3 times a week, Mrs. Sporty club.",
     importance: 0,
     choresFinishes: false,
-    // deadline: null,
     location: "Alt Erlaa",
   },
   {
@@ -37,7 +34,6 @@ let chores = [
     description: "Dinner with sister Susanne as a birthday present.",
     importance: 0,
     choresFinishes: false,
-    // deadline: "2024-10-18",
     location: "Klosterneuburg",
   },
   {
@@ -47,7 +43,6 @@ let chores = [
     description: "Cleaning the whole apartment.",
     importance: 0,
     choresFinishes: false,
-    // deadline: "2024-10-18",
     location: "Liesing",
   },
   {
@@ -57,27 +52,24 @@ let chores = [
     description: "Writing my diary every evening.",
     importance: 0,
     choresFinishes: false,
-    // deadline: null,
     location: "Liesing",
   },
   {
-    choresName: "Course",
+    choresName: "Codefactory course",
     image:
       "https://cdn.pixabay.com/photo/2020/05/30/18/05/desktop-5239850_1280.jpg",
-    description: "Attend the codefactory course.",
+    description: "Attend the course daily.",
     importance: 0,
     choresFinishes: false,
-    // deadline: null,
     location: "Vienna",
   },
   {
     choresName: "Laundry",
     image:
       "https://cdn.pixabay.com/photo/2015/02/01/16/54/clothespins-619845_1280.jpg",
-    description: "Making laundry for my family",
+    description: "Making laundry for my family.",
     importance: 0,
     choresFinishes: false,
-    deadline: null,
     location: "Liesing",
   },
   {
@@ -87,7 +79,33 @@ let chores = [
     description: "Grocery shopping.",
     importance: 0,
     choresFinishes: false,
-    // deadline: null,
+    location: "Vienna",
+  },
+  {
+    choresName: "Prework",
+    image:
+      "https://cdn.pixabay.com/photo/2018/01/17/07/06/laptop-3087585_960_720.jpg",
+    description: "Daily prework for course.",
+    importance: 0,
+    choresFinishes: false,
+    location: "Vienna",
+  },
+  {
+    choresName: "Garden",
+    image:
+      "https://cdn.pixabay.com/photo/2022/10/14/22/21/pruning-7522188_1280.jpg",
+    description: "Weekly gardening.",
+    importance: 0,
+    choresFinishes: false,
+    location: "Liesing",
+  },
+  {
+    choresName: "Parents visit",
+    image:
+      "https://cdn.pixabay.com/photo/2020/01/25/02/11/watercolour-4791614_1280.jpg",
+    description: "Visit parents twice a week.",
+    importance: 0,
+    choresFinishes: false,
     location: "Vienna",
   },
 ];
@@ -98,7 +116,7 @@ function displayCards(){
         let result = document.getElementById("result");
         result.innerHTML += `
           <div>
-              <div class="card my-3 w-75">
+              <div class="card my-3 mx-auto w-75">
               <div class="card-header fw-bold">
                   Tasks
               </div>
@@ -108,8 +126,8 @@ function displayCards(){
               <p class="card-text">${item.description}</p>
               </div>
               <div class="card-footer text-body-secondary">
-                <p class="card-text pb-1"><i class="fa-solid fa-circle-exclamation"></i> Priority level: <span class="bg-success fs-5 fw-bold text-light priorNum">${item.importance}</span></p>
-                <button class="btn btn-outline-secondary priorBtns"><i class="fa-sharp-duotone fa-solid fa-check"></i> Importance</button>
+                <p class="card-text pb-1"><i class="fa-solid fa-triangle-exclamation"></i> Priority level: <span class="bg-success fs-5 fw-bold text-light priorNum">${item.importance}</span></p>
+                <button class="btn btn-outline-secondary priorBtns"><i class="fa-sharp-duotone fa-solid fa-check"></i> Priority</button>
               </div>
             </div>
           </div>
@@ -149,7 +167,8 @@ console.log(btnSort);
 btnSort[0].addEventListener("click", sortArray);
 
 function sortArray(){
-  chores.sort((a,b) => b.importance - a.importance);
+  // chores.sort((a,b) => b.importance - a.importance);
+  chores.sort((a,b) => a.importance - b.importance);
   console.log(chores);
   let result = document.getElementById("result");
   result.innerHTML = "";
