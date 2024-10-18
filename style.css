@@ -35,7 +35,7 @@ body {
     height: auto;
     padding: 2rem;
     margin-inline: 340px;
-    margin-top: 100px;
+    margin-top: 50px;
     text-shadow: 5px 5px 10px #3A273B;
     animation: zoomIn;
     animation-duration: 5s;
@@ -97,7 +97,7 @@ body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 500;
     font-style: italic;
-    color: #633251; 
+    color: #B39CC7; 
 }
 
 .card-header {
