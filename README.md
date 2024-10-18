@@ -1,1 +1,1 @@
-Second exam about Timeplaner with index.html, script.js and style.css.
+I created a Webpage for a Timeplaner with HTML, CSS, Bootstrap and Javascript.
